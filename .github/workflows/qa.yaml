@@ -1,0 +1,17 @@
+name: Deploy Application
+on:
+ push:
+   branches:
+     - main
+schedule:
+  - cron: '0 0 * * *'
+
+jobs:
+   deploy:
+     runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repositary
+      uses: actions/checkout@v2
+
+    
